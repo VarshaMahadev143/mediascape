@@ -12,7 +12,7 @@ CREATE OR REPLACE FUNCTION global.fn_contracted_report
 RETURNS json
 LANGUAGE 'plpgsql'
 AS $BODY$
-
+------------VARSHA TEST
 DECLARE
   var_application_call_id VARCHAR(50) := ( SELECT JSON_EXTRACT_PATH_TEXT( parm_query_def, 'application_call_id' ) );
   var_page INT := CASE WHEN parm_perpage = 'ALL' THEN 0::INT ELSE parm_perpage::INT * ( parm_page - 1 ) END;
